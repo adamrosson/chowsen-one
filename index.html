@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title ></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel='stylesheet' href='styles/main.css'>
+</head>
+<body>
+  <div class="slide-wrapper">
+    <div class="slide slide-1"></div>
+    <div class="slide slide-2"></div>
+    <div class="slide slide-3"></div>
+    <div class="slide slide-4"></div>
+    <div class="slide slide-5"></div>
+    <div class="slide slide-6"></div>
+    <div class="slide slide-7"></div>
+  </div>
+  <div class="title-wrapper">
+    <div class="pre-title">
+      The
+    </div>
+    <div class="main-title">
+      ChowsenOne
+    </div>
+  </div>
+
+  <div class="container content-wrapper">
+    <form class="card">
+      <div class="form-group card-body restaurant-input-wrapper">
+        <input type="text" class="form-control js-restaurant-name-input add-item-input" placeholder="Enter Restaurant Name">
+        <button type="submit" class="btn btn-primary js-additem add-item-button">Add New Restaurant</button>
+      </div>
+    </form>
+    <br>
+    <div class="card list-wrapper">
+      <div class="restaurant-list-title">
+        Your restaurant list:
+      </div>
+      <div class="js-data">
+        No Restaurants Have Been Added
+      </div>
+    </div>
+    <div class="randomize-wrapper">
+      <button name="randomize button" class="btn js-randomize-button randomize-button">Pick A Restaurant For Me</button>
+    </div>
+    <div class="card random-restaurant-wrapper js-result-wrapper">
+      No restaurant selected, yet
+    </div>
+  </div>
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src='javascript/app.js'></script>
+</body>
+</html>

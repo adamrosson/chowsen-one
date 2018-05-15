@@ -1,0 +1,161 @@
+body {
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-wrapper {
+  width: 100%;
+}
+
+.slide {
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.slide-1 {
+  background-image: url("../images/pic1.jpg");
+}
+
+.slide-2 {
+  background-image: url("../images/pic2.jpg");
+}
+
+.slide-3 {
+  background-image: url("../images/pic3.jpg");
+}
+
+.slide-4 {
+  background-image: url("../images/pic4.jpg");
+}
+
+.slide-5 {
+  background-image: url("../images/pic5.jpg");
+}
+
+.slide-6 {
+  background-image: url("../images/pic6.jpg");
+}
+
+.slide-7 {
+  background-image: url("../images/pic8.jpg");
+}
+
+.pre-title,
+.main-title {
+  font-family: 'Oswald', sans-serif;
+}
+
+.pre-title {
+  font-size: 26px;
+}
+
+.main-title {
+  font-size: 52px;
+  line-height: 14px;
+}
+
+.title-wrapper {
+  color: white;
+  margin-bottom: 30px;
+  padding: 50px 0;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0px 1px 1px black;
+  top: 50px;
+  width: 100%;
+}
+
+.content-wrapper {
+  left: 50%;
+  margin-left: -360px;
+  position: absolute;
+  top: 200px;
+  width: 720px;
+}
+
+.restaurant-input-wrapper {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.list-wrapper {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.restaurant-list-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.list-app-title {
+  color: white;
+  text-shadow: 0px 1px 1px black;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+}
+
+.add-item-input {
+  display: inline-flex;
+  flex-grow: 2;
+}
+
+.add-item-button {
+  display: inline-flex;
+  margin-left: 20px;
+}
+
+.remove-button,
+.randomize-button {
+  background-color: #d80101;
+  border-color: #d80101;
+  color: white;
+}
+
+.remove-button {
+  position: absolute;
+  right: 6px;
+}
+
+.randomize-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.randomize-button:hover,
+.randomize-button:active,
+.remove-button:hover,
+.remove-button:active {
+  background-color: red;
+  border-color: red;
+}
+
+.randomize-button:focus,
+.add-item-button:focus
+.add-item-button:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.random-restaurant-wrapper {
+  color: #d80101;
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding: 20px;
+}
