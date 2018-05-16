@@ -68,3 +68,52 @@ randomItemButton.addEventListener('click', e => {
 	let randomName = restaurantList[Math.floor(Math.random()*restaurantList.length)].name;
 	resultWrapper.innerText = randomName;
 });
+
+const yelpSearch = $(".js-yelp-search-button").click(function() {
+  const yelpSearchInput = document.querySelector('.js-restaurant-yelp-input').value;
+  event.preventDefault();
+  Yelp.search(yelpSearchInput).then( businesses => {
+    renderYelpResults(businesses);
+  });
+});
+
+const renderYelpResults = (businesses) => {
+  let htmlStr = '<ul class="list-group">';
+	for(let i = 0; i < businesses.length; i++) {
+		htmlStr += `<li class="list-group-item">
+			<span class="restaurant-item-${i}">${businesses[i].name}</span>
+		</li>`;
+	}
+	htmlStr += "</ul>";
+  document.querySelector('.js-yelp-returned-results').innerHTML = htmlStr;
+  document.querySelector('.js-restaurant-yelp-input').value = '';
+}
+
+const Yelp = {
+  search(term){
+    console.log("start yelp api call");
+    return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=Denver`,
+    {
+      headers: {Authorization: `Bearer E0eCUDCKd9MhLPXrNsIrI6rIeVcLoWiLM3mOVHuhd6kYVdJVJXiy4E7g2CWXLRXj2Ai5-BW2504oju7M44Yd5EoLj3qLLjyU8vyN7kbcA6ilSuw_WLi74M6gyYD4WnYx`}
+    }).then( response => {
+      console.log('response is', response);
+      return response.json();
+    }).then( jsonResponse => {
+      if (jsonResponse.businesses) {
+        console.log(jsonResponse.businesses);
+        return jsonResponse.businesses.map( business => ({
+          id: business.id,
+          imageSrc: business.image_url,
+          name: business.name,
+          address: business.location.address1,
+          city: business.location.city,
+          state: business.location.state,
+          zipCode: business.location.zip_code,
+          category: business.categories[0].title,
+          rating: business.rating,
+          reviewCount: business.review_count
+        }));
+      }
+    });
+  }
+};
