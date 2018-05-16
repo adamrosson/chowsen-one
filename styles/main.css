@@ -44,6 +44,10 @@ body {
   background-image: url("../images/pic8.jpg");
 }
 
+.add-restaurant-input-wrapper {
+  margin-bottom: 10px;
+}
+
 .pre-title,
 .main-title {
   font-family: 'Oswald', sans-serif;
@@ -133,7 +137,7 @@ body {
 .randomize-button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 10px 0;
   width: 100%;
 }
@@ -158,4 +162,17 @@ body {
   font-weight: bold;
   margin-bottom: 40px;
   padding: 20px;
+}
+
+.yelp-search-input-wrapper {
+  margin-bottom: 10px;
+}
+
+.restaurant-yelp-wrapper {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.yelp-search-input {
+  margin-right: 20px;
 }
