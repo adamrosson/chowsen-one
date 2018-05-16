@@ -6,6 +6,7 @@ body {
 }
 
 .slide-wrapper {
+  position: fixed;
   width: 100%;
 }
 
@@ -87,7 +88,7 @@ body {
 }
 
 .list-wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -135,9 +136,9 @@ body {
 }
 
 .randomize-button {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin-bottom: 40px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
   padding: 10px 0;
   width: 100%;
 }
@@ -160,11 +161,11 @@ body {
 }
 
 .random-restaurant-wrapper {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   color: #d80101;
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: 40px;
   padding: 20px;
   text-align: center;
 }
